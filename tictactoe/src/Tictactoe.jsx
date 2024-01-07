@@ -35,11 +35,20 @@ const Tictactoe = () => {
         else{
           return false;
         }
+
+    function reset () {
+        setArr([[], [], []]);
+        setWinningText("");
+        }
         
       }
     return (
     <div style={{display:"grid", 
     gridTemplateColumns:"auto auto auto"}}>
+
+
+
+
       {stateArr.map(function(ele,ind){
         return win===false ?<button
                 onClick={function(){
@@ -63,6 +72,8 @@ const Tictactoe = () => {
             </button>:<button>{ele}</button>
       })}
       {win===true?<p>player {player==="X"?"0":"X"} has won the match</p>:<></>}
+<br /><br />
+      <button>reset</button>
     </div>
   )
 }
