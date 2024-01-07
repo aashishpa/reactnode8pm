@@ -1,4 +1,4 @@
-import "./app.css"
+
 import Navigation from "./component/Navigation";
 import Main from "./component/Main"
 import Bio from "./component/Bio";
